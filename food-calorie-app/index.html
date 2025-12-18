@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Food Calorie Detector</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.0"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>🍎 Food Calorie Detector</h1>
+
+    <div class="card">
+      <div class="weight-input">
+        <label for="gramsInput">Вес порции (г):</label>
+        <input type="number" id="gramsInput" value="100" min="1" max="2000">
+      </div>
+
+      <div class="preview" id="preview">
+        <span class="hint">Загрузите фото еды</span>
+        <img id="imgPreview" src="placeholder.jpg" alt="" style="display:none;">
+      </div>
+
+      <input type="file" id="fileInput" accept="image/*">
+      
+      <div class="actions">
+        <button id="analyzeBtn" class="btn" disabled>🔍 Анализировать</button>
+        <button id="clearBtn" class="btn secondary">🗑️ Очистить</button>
+      </div>
+
+      <div class="result" id="result" style="display:none;">
+        <h2>Результаты анализа:</h2>
+        <div id="predictions"></div>
+        <p id="calories"></p>
+        <p class="source" id="source"></p>
+      </div>
+    </div>
+
+    <footer>
+      <small>Работает в браузере с помощью TensorFlow.js • <a href="https://github.com/yourusername/food-calorie-app" target="_blank">Исходный код</a></small>
+    </footer>
+  </main>
+
+  <script src="calorie-database.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
