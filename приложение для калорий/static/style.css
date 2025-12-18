@@ -1,0 +1,121 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#ff6b35;
+  --accent-2:#ff8a4a;
+  --muted:#9aa4b2;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#0b1220 0%, #071027 100%);
+  color:#e6eef8;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.container{
+  width:100%;
+  max-width:720px;
+  padding:24px;
+}
+
+h1{
+  text-align:center;
+  margin:0 0 18px 0;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:14px;
+  padding:18px;
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.preview{
+  height:280px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  overflow:hidden;
+  position:relative;
+  margin-bottom:12px;
+}
+
+.preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hint{
+  color:var(--muted);
+  font-size:16px;
+}
+
+input[type=file]{
+  display:block;
+  width:100%;
+  margin:6px 0 12px 0;
+  color:var(--muted);
+}
+
+.actions{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.btn{
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow: 0 6px 18px rgba(255,107,53,0.18);
+}
+
+.btn[disabled]{
+  opacity:0.5;
+  cursor:not-allowed;
+}
+
+.result{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,0.02);
+}
+
+.result h2{
+  margin:0;
+  font-size:20px;
+}
+
+.result p{
+  margin:6px 0;
+  color:var(--muted);
+}
+
+.source{
+  font-size:12px;
+  color:#7f8a97;
+}
+
+footer{
+  margin-top:16px;
+  text-align:center;
+  color:var(--muted);
+}
